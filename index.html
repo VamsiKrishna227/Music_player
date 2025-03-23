@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+        <style>
+            .music{
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                border-radius: 10px;
+            }
+            body{
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: url(murari3.jpg);
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                backdrop-filter: blur(10px);
+            }
+            
+    
+            .music{
+                
+                height: 500px;
+                width: 300px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-content: center;
+                align-items: center;
+                border: 1px solid black; 
+            }
+            .music img{
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                border: 1px solid black;
+                animation-name: img;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
+            }
+    
+            @keyframes img{
+             from{
+                transform: rotate(0deg);
+             }
+             to{
+                transform: rotate(360deg);
+             }
+            }
+    
+            .musicline{
+                display: flex;
+                column-gap: 2px;
+                justify-content: center;
+            }
+            .line{
+                width: 5px;
+                height: 20px;
+                /* background-color: orangered; */
+                background: rgb(225,211,58);
+                background: linear-gradient(90deg, rgba(225,211,58,0.7837185899750525) 0%, rgba(237,111,18,1) 35%, rgba(10,10,10,0.5736345563616072) 100%);
+                margin-top: 130px;
+            } 
+    
+            .line1,.line5,.line7{
+                animation-name: line;
+                animation-duration: 0.5s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+    
+            
+            
+            .line2,.line4,.line8,.line10{
+                animation-name: line2;
+                animation-duration:0.5s;
+                animation-delay: 0.2s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+            .line3,.line6,.line9{
+                animation-name: line3;
+                animation-duration: 0.5s;
+                animation-delay: 0.3s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+            
+            @keyframes line1{
+                from{
+                    height:20px;
+                    transform: scaleY(1);
+                }
+                to{
+                     
+                    transform: scaley(3);
+                }
+            }
+            @keyframes line2{
+                from{
+                    height:20px;
+                    transform: scaleY(1);
+                }
+                to{
+                     
+                    transform: scaley(2.5);
+                }
+            }
+    
+            @keyframes line3{
+                from{
+                    height:20px;
+                    transform: scaleY(1);
+                }
+                to{
+                     
+                    transform: scaley(2);
+                }
+            }
+    
+            .audio{
+               width: 280px;
+               background-color: none; 
+                
+            }
+           
+    
+    
+        </style>
+    </head>
+    <body>
+         
+    
+        <div class="music">
+            <img src="murari4.jpg" alt="" class="mimg">
+                 Movie: Murari <br>
+                 song : Bangaru kalla buchammo..mp3
+            <div class="musicline">
+                <div class="line1 line"></div>
+                <div class="line2 line"></div>
+                <div class="line3 line"></div>
+                <div class="line4 line"></div>
+                <div class="line5 line"></div>
+                <div class="line6 line"></div>
+                <div class="line7 line"></div>
+                <div class="line8 line"></div>
+                <div class="line9 line"></div>
+                <div class="line10 line"></div>
+            </div>
+            
+            <audio  class="audio" controls>
+                <source src="Bangaru Kalla-SenSongsMp3.Co.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+     
+    </body>
+    </html>
+</body>
+</html>
